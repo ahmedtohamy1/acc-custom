@@ -235,7 +235,7 @@ Options
 
   -ss:   Same as above
 
-  -s|--set v|--voltage [millivolts|-] [--exit]   Set/print/restore_default max charging voltage (range: 3700-4300$(print_mV))
+  -s|--set v|--voltage [millivolts|-] [--exit]   Set/print/restore_default max charging voltage (range: 3700-4500$(print_mV))
     e.g.,
       acc -s v (print)
       acc -s v 3920 (set)

@@ -25,19 +25,19 @@ set_ch_volt() {
           } || return 1
       }
 
-      # = [3700-4300] millivolts
-      if [ $1 -ge 3700 -a $1 -le 4300 ]; then
+      # = [3700-4500] millivolts
+      if [ $1 -ge 3700 -a $1 -le 4500 ]; then
         apply_voltage $1 ${2-} || return 1
 
       # < 3700 millivolts
       elif [ $1 -lt 3700 ]; then
-        ! ${verbose:-true} || echo "(!) [3700-4300]$(print_mV; print_only)"
+        ! ${verbose:-true} || echo "(!) [3700-4500]$(print_mV; print_only)"
         apply_voltage 3700 ${2-} || return 1
 
-      # > 4300 millivolts
-      elif [ $1 -gt 4300 ]; then
-        ! ${verbose:-true} || echo "(!) [3700-4300]$(print_mV; print_only)"
-        apply_voltage 4300 ${2-} || return 1
+      # > 4500 millivolts
+      elif [ $1 -gt 4500 ]; then
+        ! ${verbose:-true} || echo "(!) [3700-4500]$(print_mV; print_only)"
+        apply_voltage 4500 ${2-} || return 1
       fi
     fi
 

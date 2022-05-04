@@ -303,7 +303,7 @@ currentWorkaround=false
 
 # chargingSwitch=charging_switch=(milliamps)
 
-# chargingSwitch=charging_switch=(3700-4300 millivolts)
+# chargingSwitch=charging_switch=(3700-4500 millivolts)
 
 # applyOnBoot=apply_on_boot=(ctrl_file1::value[::default] ctrl_file2::value[::default] ... --exit)
 
@@ -486,7 +486,7 @@ currentWorkaround=false
 # e.g., acc -s s="battery/charge_enabled 1 0 --"
 # acc -ss always appends " --".
 # charging_switch=milliamps (e.g., 0-250) enables current-based charging control.
-# If charging switch is set to 3700-4300 (millivolts), acc stops charging by limiting voltage.
+# If charging switch is set to 3700-4500 (millivolts), acc stops charging by limiting voltage.
 # For details, refer to the readme's tips section.
 # Unlike the original variant, this kind of switch is never unset automatically.
 # Thus, in this case, appending " --" to it leads to invalid syntax.
@@ -719,7 +719,7 @@ Options
 
   -ss:   Same as above
 
-  -s|--set v|--voltage [millivolts|-] [--exit]   Set/print/restore_default max charging voltage (range: 3700-4300 Millivolts)
+  -s|--set v|--voltage [millivolts|-] [--exit]   Set/print/restore_default max charging voltage (range: 3700-4500 Millivolts)
     e.g.,
       acc -s v (print)
       acc -s v 3920 (set)
@@ -1206,7 +1206,7 @@ If your device does not support custom current limits, use a dedicated ("slow") 
 
 ### Current and Voltage Based Charging Control
 
-Enabled by setting charging_switch=milliamps or charging_switch=3700-4300 (millivolts) (e.g., `acc -s s=0`, `acc -s s=250`, `acc -s s=3700`, `acc -ss` (wizard)).
+Enabled by setting charging_switch=milliamps or charging_switch=3700-4500 (millivolts) (e.g., `acc -s s=0`, `acc -s s=250`, `acc -s s=3700`, `acc -ss` (wizard)).
 
 Essentially, this turns current/voltage control files into _[pseudo] charging switches_.
 
